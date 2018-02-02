@@ -13,7 +13,7 @@ exports.sendMessage = function (msg) {
     if (msg === undefined) {
         return;
     }
-    msg = bold(name) + '\n' + msg;
+    msg = exports.bold("• " + name + " •") + '\n' + msg;
     msg = msg.replace("+", "%2B");
     url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatID}&text=${msg}&parse_mode=html`;
 
